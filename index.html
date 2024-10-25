@@ -191,10 +191,9 @@
                         confirmation.style.backgroundColor = '#f44336'; // Rojo
                         resultText.textContent = 'MALO';
                         resultText.style.color = '#fff'; // Texto blanco para contraste
-                        //Borrar en  caso de que no  funcione nuevo!!!
-                        // Crear el elemento para el mensaje adicional
-                        const additionalMessage = document.createElement('p');
-                        additionalMessage.textContent = 'Nos gustaría saber el motivo de tu respuesta negativa. Por favor, envía un correo a jos@.com';
+                       
+                        const additionalMessage = document.createElement('p'); // Crear el elemento para el mensaje adicional para la respuesta MALA
+                        additionalMessage.textContent = 'Nos gustaría saber el motivo de tu respuesta negativa. Por favor, envía un correo a cdcelc@cucei.udg.mx para dar un mejor seguimiento';
                         confirmation.appendChild(additionalMessage);
                     }
                     confirmation.style.display = 'block';
