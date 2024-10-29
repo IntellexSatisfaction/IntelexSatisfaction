@@ -211,4 +211,17 @@
         }
     </script>
 </body>
+   //ESta parte agregaste para bloquear las opciones 
+    function submitForm(value) {
+    const button = event.target;
+    button.disabled = true;
+
+    const form = document.getElementById('myForm');
+    // ... (resto del código para enviar el formulario)
+
+    setTimeout(() => {
+        button.disabled = false;
+    }, 3000);
+}
+Usa el códi
 </html>
