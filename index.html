@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #404040; /* Fondo gris claro para mayor contraste#e0e0e0 */
+            background-color: #e0e0e0; /* Fondo gris claro para mayor contraste */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -137,7 +137,7 @@
 <body>
     <form id="myForm" action="https://script.google.com/macros/s/AKfycbxMcmQhiKAcyFIeztfND_uMZ2qyGw1VoO_c3I1omn62a-6dux0nwiF7ZjDi4Z62iOqR/exec" method="post">
         <h1>Encuesta Universitaria</h1>
-        <label>¿Cómo calificarías tu experiencia general en la coordiancion de INCE?</label>
+        <label>¿Cómo calificarías tu experiencia general en nuestra coordinación?</label>
         <div class="button-group">
             <div class="button-container">
                 <button type="button" class="buena" onclick="submitForm('Buena')">🙂</button>
@@ -191,17 +191,13 @@
                         confirmation.style.backgroundColor = '#f44336'; // Rojo
                         resultText.textContent = 'MALO';
                         resultText.style.color = '#fff'; // Texto blanco para contraste
-                       
-                        const additionalMessage = document.createElement('p'); // Crear el elemento para el mensaje adicional para la respuesta MALA
-                        additionalMessage.textContent = 'Nos gustaría saber el motivo de tu respuesta negativa. Por favor, envía un correo a cdcelc@cucei.udg.mx para dar un mejor seguimiento';
-                        confirmation.appendChild(additionalMessage);
                     }
                     confirmation.style.display = 'block';
 
                     // Redirigir a la página principal después de un breve retraso
                     setTimeout(() => {
                         window.location.reload(); // Recargar la página para mostrar el formulario nuevamente
-                    }, 5000); // Espera 2 segundos antes de redirigir
+                    }, 2000); // Espera 2 segundos antes de redirigir
                 } else {
                     console.error('Error en la solicitud.');
                 }
@@ -211,17 +207,4 @@
         }
     </script>
 </body>
-   //ESta parte agregaste para bloquear las opciones 
-    function submitForm(value) {
-    const button = event.target;
-    button.disabled = true;
-
-    const form = document.getElementById('myForm');
-    // ... (resto del código para enviar el formulario)
-
-    setTimeout(() => {
-        button.disabled = false;
-    }, 3000);
-}
-Usa el códi
 </html>
