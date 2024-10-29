@@ -8,48 +8,48 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e0e0e0; /* Fondo gris claro para mayor contraste */
+            background-color: #e0e0e0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            padding: 40px; /* Aumento de padding */
+            padding: 40px;
             box-sizing: border-box;
         }
 
         form {
-            background-color: #ffffff; /* Cuadro principal blanco para alto contraste */
-            padding: 40px; /* Aumento de padding */
+            background-color: #ffffff;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para mayor profundidad */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 800px; /* Ajustado para adaptarse mejor en pantallas más grandes */
+            max-width: 800px;
             color: #333;
             text-align: center;
             box-sizing: border-box;
         }
 
         h1 {
-            margin-bottom: 30px; /* Aumento del margen inferior */
-            font-size: 2.5em; /* Aumento del tamaño del título */
-            color: #1a237e; /* Azul oscuro para el título */
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #1a237e;
         }
 
         label {
             display: block;
-            margin: 20px 0; /* Aumento del margen */
-            font-size: 1.5em; /* Aumento del tamaño de la fuente */
+            margin: 20px 0;
+            font-size: 1.5em;
             font-weight: normal;
-            color: #1a237e; /* Azul oscuro para el texto */
+            color: #1a237e;
         }
 
         .button-group {
             display: flex;
-            flex-wrap: wrap; /* Permite que los botones se acomoden en filas si el espacio es limitado */
-            gap: 30px; /* Aumento del espacio entre botones */
-            margin-top: 30px; /* Aumento del margen superior */
-            justify-content: center; /* Centrando los botones */
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center;
         }
 
         .button-container {
@@ -59,79 +59,74 @@
         }
 
         button {
-            width: 120px; /* Aumento del ancho del botón */
-            height: 120px; /* Aumento de la altura del botón */
-            border-radius: 50%; /* Forma redonda */
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
             border: none;
             color: #fff;
             font-weight: bold;
-            font-size: 80px; /* Aumento del tamaño del emoji */
+            font-size: 80px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.1); /* Fondo tenue */
-            padding: 0; /* Elimina el relleno */
-            margin: 0; /* Elimina el margen */
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 0;
+            margin: 0;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
 
-        /* Botones personalizados con colores originales */
         .buena {
-            background-color: #4caf50; /* Verde */
+            background-color: #4caf50;
         }
 
         .regular {
-            background-color: #ffeb3b; /* Amarillo */
-            color: #000; /* Texto negro para contraste */
+            background-color: #ffeb3b;
+            color: #000;
         }
 
         .mala {
-            background-color: #f44336; /* Rojo */
+            background-color: #f44336;
         }
 
-        /* Efecto de resaltado al presionar */
         button:active {
-            background-color: rgba(0, 0, 0, 0.2); /* Color más oscuro al presionar */
-            transform: scale(0.9); /* Efecto de escala al presionar */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+            background-color: rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Efecto de cambio de color cuando el mouse pasa sobre el botón */
         button:hover {
-            background-color: rgba(0, 0, 0, 0.2); /* Fondo más oscuro al pasar el mouse */
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        /* Tamaño y estilo del texto debajo de los botones */
         .button-container span {
-            font-size: 20px; /* Aumento del tamaño de la fuente */
-            margin-top: 6px; /* Aumento del margen */
-            color: #333; /* Color de texto */
+            font-size: 20px;
+            margin-top: 6px;
+            color: #333;
         }
 
         .message {
             text-align: center;
-            padding: 30px; /* Aumento de padding */
+            padding: 30px;
             border-radius: 10px;
-            color: #fff; /* Texto blanco para contraste */
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para profundidad */
-            display: none; /* Ocultar inicialmente */
+            color: #fff;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            display: none;
             width: 100%;
-            max-width: 800px; /* Ajustado para adaptarse mejor en pantallas más grandes */
+            max-width: 800px;
             box-sizing: border-box;
         }
 
-        .message .result-text {
-            font-size: 4em; /* Aumento del tamaño para la respuesta */
+        .result-text {
+            font-size: 4em;
             font-weight: bold;
         }
 
-        .message .thank-you {
-            font-size: 1.2em; /* Aumento del tamaño del texto de agradecimiento */
+        .thank-you {
+            font-size: 1.2em;
             margin-top: 10px;
         }
-
     </style>
 </head>
 <body>
@@ -140,15 +135,15 @@
         <label>¿Cómo calificarías tu experiencia general en nuestra coordinación?</label>
         <div class="button-group">
             <div class="button-container">
-                <button type="button" class="buena" onclick="submitForm('Buena')">🙂</button>
+                <button type="button" class="buena" onclick="submitForm('Buena', this)">🙂</button>
                 <span>Bueno</span>
             </div>
             <div class="button-container">
-                <button type="button" class="regular" onclick="submitForm('Regular')">😐</button>
+                <button type="button" class="regular" onclick="submitForm('Regular', this)">😐</button>
                 <span>Regular</span>
             </div>
             <div class="button-container">
-                <button type="button" class="mala" onclick="submitForm('Mala')">☹️</button>
+                <button type="button" class="mala" onclick="submitForm('Mala', this)">☹️</button>
                 <span>Malo</span>
             </div>
         </div>
@@ -159,45 +154,43 @@
     </div>
 
     <script>
-        function submitForm(value) {
+        function submitForm(value, button) {
+            // Deshabilitar todos los botones
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => btn.disabled = true);
+
             const form = document.getElementById('myForm');
             const input = document.createElement('input');
             input.type = 'hidden';
             input.name = 'rating';
             input.value = value;
             form.appendChild(input);
-            
-            // Usar fetch para enviar datos sin recargar la página
+
             fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form)
             }).then(response => {
                 if (response.ok) {
-                    // Ocultar el formulario y mostrar el mensaje de confirmación
                     document.getElementById('myForm').style.display = 'none';
                     const confirmation = document.getElementById('confirmation');
                     const resultText = document.getElementById('resultText');
 
-                    // Cambiar el mensaje y color de fondo según la selección
                     if (value === 'Buena') {
-                        confirmation.style.backgroundColor = '#4caf50'; // Verde
+                        confirmation.style.backgroundColor = '#4caf50';
                         resultText.textContent = 'BUENA';
-                        resultText.style.color = '#fff'; // Texto blanco para contraste
                     } else if (value === 'Regular') {
-                        confirmation.style.backgroundColor = '#ffeb3b'; // Amarillo
+                        confirmation.style.backgroundColor = '#ffeb3b';
                         resultText.textContent = 'REGULAR';
-                        resultText.style.color = '#fff'; // Texto negro para contraste
                     } else if (value === 'Mala') {
-                        confirmation.style.backgroundColor = '#f44336'; // Rojo
+                        confirmation.style.backgroundColor = '#f44336';
                         resultText.textContent = 'MALO';
-                        resultText.style.color = '#fff'; // Texto blanco para contraste
                     }
                     confirmation.style.display = 'block';
 
-                    // Redirigir a la página principal después de un breve retraso
+                    // Rehabilitar los botones después de un breve retraso
                     setTimeout(() => {
-                        window.location.reload(); // Recargar la página para mostrar el formulario nuevamente
-                    }, 2000); // Espera 2 segundos antes de redirigir
+                        window.location.reload();
+                    }, 2000);
                 } else {
                     console.error('Error en la solicitud.');
                 }
@@ -208,3 +201,4 @@
     </script>
 </body>
 </html>
+
