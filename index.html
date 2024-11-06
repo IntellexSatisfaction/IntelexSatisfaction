@@ -8,48 +8,48 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #404040; /* Fondo gris oscuro */
+            background-color: #404040;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            padding: 40px; /* Aumento de padding */
+            padding: 40px;
             box-sizing: border-box;
         }
 
         form {
-            background-color: #ffffff; /* Cuadro principal blanco para alto contraste */
-            padding: 40px; /* Aumento de padding */
+            background-color: #ffffff;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para mayor profundidad */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 800px; /* Ajustado para la pantalla táctil de 8 pulgadas */
+            max-width: 800px;
             color: #333; 
             text-align: center;
             box-sizing: border-box;
         }
 
         h1 {
-            margin-bottom: 30px; /* Aumento del margen inferior */
-            font-size: 2.5em; /* Aumento del tamaño del título */
-            color: #1a237e; /* Color para el título */
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #1a237e;
         }
 
         label {
             display: block;
-            margin: 20px 0; /* Medida del margen */
-            font-size: 1.5em; /* Medida de la letra */
+            margin: 20px 0;
+            font-size: 1.5em;
             font-weight: normal;
-            color: #1a237e; /* Color para el texto */
+            color: #1a237e;
         }
 
         .button-group {
             display: flex;
-            flex-wrap: wrap; /* Permite que se acomode el espacio si es limitado */
-            gap: 30px; /* Espacio entre botones opciones */
-            margin-top: 30px; /* Margen superior */
-            justify-content: center; /* Centrado de los botones */
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center;
         }
 
         .button-container {
@@ -59,72 +59,73 @@
         }
 
         button {
-            width: 120px; /* Medidas de los botones */
-            height: 120px; /* Altura del botón */
-            border-radius: 50%; /* Forma redonda */
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
             border: none;
             color: #fff;
             font-weight: bold;
-            font-size: 80px; /* Tamaño del emoji */
+            font-size: 80px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.1); /* Fondo tenue */
-            padding: 0; /* Elimina el relleno */
-            margin: 0; /* Elimina el margen */
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 0;
+            margin: 0;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            line-height: 1; /* Asegura que el emoji esté centrado */
         }
 
         .buena {
-            background-color: #4caf50; /* Verde */
+            background-color: #4caf50;
         }
 
         .regular {
-            background-color: #ffeb3b; /* Amarillo */
-            color: #000; /* Texto negro para contraste */
+            background-color: #ffeb3b;
+            color: #000;
         }
 
         .mala {
-            background-color: #f44336; /* Rojo */
+            background-color: #f44336;
         }
 
         button:active {
-            background-color: rgba(0, 0, 0, 0.2); /* Color más oscuro al presionar */
-            transform: scale(0.9); /* Efecto de escala al presionar */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+            background-color: rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         button:hover {
-            background-color: rgba(0, 0, 0, 0.2); /* Fondo más oscuro al pasar el mouse */
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .button-container span {
-            font-size: 20px; /* Tamaño del texto debajo de los botones */
-            margin-top: 6px; /* Aumento del margen */
-            color: #333; /* Color de texto */
+            font-size: 20px;
+            margin-top: 6px;
+            color: #333;
         }
 
         .message {
             text-align: center;
-            padding: 30px; /* Aumento de padding */
+            padding: 30px;
             border-radius: 10px;
-            color: #fff; /* Texto blanco para contraste */
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para profundidad */
-            display: none; /* Ocultar inicialmente */
+            color: #fff;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            display: none;
             width: 100%;
-            max-width: 800px; /* Ajustado para adaptarse mejor en pantallas más grandes */
+            max-width: 800px;
             box-sizing: border-box;
         }
 
         .result-text {
-            font-size: 4em; /* Tamaño para la respuesta */
+            font-size: 4em;
             font-weight: bold;
         }
 
         .thank-you {
-            font-size: 1.2em; /* Tamaño del texto de agradecimiento */
+            font-size: 1.2em;
             margin-top: 10px;
         }
     </style>
@@ -150,12 +151,11 @@
     </form>
     <div id="confirmation" class="message">
         <div id="resultText" class="result-text"></div>
-        <div class="thank-you"></div> <!-- Este div se llenará dinámicamente -->
+        <div class="thank-you"></div>
     </div>
 
     <script>
         function submitForm(value, button) {
-            // Deshabilitar todos los botones
             const buttons = document.querySelectorAll('button');
             buttons.forEach(btn => btn.disabled = true);
 
@@ -166,41 +166,34 @@
             input.value = value;
             form.appendChild(input);
 
-            // Enviar los datos de la encuesta
             fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form)
             }).then(response => {
                 if (response.ok) {
-                    // Ocultar el formulario
                     document.getElementById('myForm').style.display = 'none';
                     const confirmation = document.getElementById('confirmation');
                     const resultText = document.getElementById('resultText');
-                    const thankYouText = document.querySelector('.thank-you'); // Selecciona el div para el mensaje
+                    const thankYouText = document.querySelector('.thank-you');
 
-                    // Configurar el mensaje de acuerdo a la respuesta
                     if (value === 'Buena') {
-                        confirmation.style.backgroundColor = '#4caf50'; // Verde
+                        confirmation.style.backgroundColor = '#4caf50';
                         resultText.textContent = 'BUENA';
                         thankYouText.textContent = 'IntellexSatisfactio agradece por tu respuesta';
                     } else if (value === 'Regular') {
-                        confirmation.style.backgroundColor = '#ffeb3b'; // Amarillo
+                        confirmation.style.backgroundColor = '#ffeb3b';
                         resultText.textContent = 'REGULAR';
                         thankYouText.textContent = 'IntellexSatisfactio agradece por tu respuesta';
                     } else if (value === 'Mala') {
-                        confirmation.style.backgroundColor = '#f44336'; // Rojo
+                        confirmation.style.backgroundColor = '#f44336';
                         resultText.textContent = 'MALO';
-                        // Mensaje específico para respuesta negativa
                         thankYouText.textContent = 'Nos gustaría saber el motivo de respuesta negativa. Por favor envía un correo a cdcelc@cucei.udg.mx para tener un seguimiento.';
                     }
 
-                    // Mostrar el mensaje de confirmación
                     confirmation.style.display = 'block';
-
-                    // Volver a mostrar el formulario después de 3 segundos
                     setTimeout(() => {
-                        window.location.reload(); // Recargar la página
-                    }, 5000); // Espera 5 segundos antes de recargar
+                        window.location.reload();
+                    }, 5000);
                 } else {
                     console.error('Error en la solicitud.');
                 }
@@ -209,5 +202,7 @@
             });
         }
     </script>
-</body
+</body>
+</html>
+
 
